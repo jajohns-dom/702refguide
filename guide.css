@@ -107,3 +107,20 @@ footer {
 .skip:focus {
     position: static;
 }
+
+@media all and (min-width: 1100px) {
+    main {
+        max-width: 1150px;
+    }
+
+    section[id] {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 15px;
+        align-items: start;
+    }
+
+    section[id] h2, #start .resource {
+        grid-column: 1 / -1;
+    }
+}
