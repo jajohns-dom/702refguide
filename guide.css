@@ -1,0 +1,109 @@
+body {
+    background: rgb(52, 78, 65);
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px 20px;
+}
+
+header, footer {
+    color: white;
+}
+
+.layout {
+    display: flex; 
+    flex-direction: column;
+    gap: 25px; 
+}
+
+aside {
+    background: rgb(245, 243, 236);
+    border: 2px solid black; 
+    padding: 0px 15px;
+    font-size: small;
+}
+
+aside a {
+    color: rgb(30, 90, 60);
+}
+
+aside ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+main {
+    flex: 1;
+    max-width: 850px;
+}
+
+section h2 {
+    color: white;
+}
+
+.intro, .resource {
+    background: rgb(245, 243, 236);
+    padding: 5px 20px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+.resource {
+    overflow-wrap: break-word;
+}
+
+.resource a {
+    color: rgb(30, 90, 60);
+}
+
+footer {
+    font-size: small;
+}
+
+
+.tag {
+    display: inline-block;
+    font-size: small;
+    font-weight: bold;
+    padding: 3px 8px;
+    border: 2px solid black; 
+    margin-bottom: 4px;
+    color: black;
+}
+
+.topic {
+    background: white;
+}
+
+@media all and (min-width: 768px) {
+    .layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    aside {
+        position: sticky;
+        top: 15px;
+        width: 250px;
+        max-height: 90vh;
+        overflow-y: auto;
+    }
+} 
+
+/*
+.tags {
+    margin-top: -8px;
+}
+*/
+
+.skip {
+    position: absolute;
+    left: -9999px;
+}
+
+.skip:focus {
+    position: static;
+}
